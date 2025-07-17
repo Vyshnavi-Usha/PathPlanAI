@@ -84,7 +84,7 @@ python -m venv venv
 pip install -r requirements.txt
 ```
 
-- Set up your Google Cloud Project ID and Region. It's recommended to use environment variables.
+Set up your Google Cloud Project ID and Region. It's recommended to use environment variables.
 
 #### Create a .env file in the backend directory:
 
