@@ -61,15 +61,15 @@ git clone <your-repository-url>
 cd <your-repository-name>
 ```
 
-### 1. Backend Setup
+### 2. Backend Setup
 
-### Navigate to the backend directory:
+- Navigate to the backend directory:
 
 ```bash
 cd backend
 ```
 
-### Create and activate a Python virtual environment:
+#### Create and activate a Python virtual environment:
 
 ```bash
 
@@ -78,15 +78,15 @@ python -m venv venv
 # On macOS/Linux: source venv/bin/activate
 ```
 
-### Install Python dependencies:
+#### Install Python dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Set up your Google Cloud Project ID and Region. It's recommended to use environment variables.
+- Set up your Google Cloud Project ID and Region. It's recommended to use environment variables.
 
-### Create a .env file in the backend directory:
+#### Create a .env file in the backend directory:
 
 ```bash
 # .env file in backend/
@@ -94,54 +94,58 @@ PROJECT_ID="your-gcp-project-id"
 REGION="your-gcp-region" # e.g., us-central1
 ```
 
-### Run the Flask backend:
+#### Run the Flask backend:
 
 ```bash
 python app.py
 ```
 
-### The backend should start on http://127.0.0.1:5000.
+The backend should start on http://127.0.0.1:5000.
 
 ### 3. Frontend Setup
 
-### Ensure you are in the project's root directory (where your src folder and package.json file are located).
+Ensure you are in the project's root directory (where your src folder and package.json file are located).
 
-### Install Node.js dependencies:
+#### Install Node.js dependencies:
 
 ```bash
 npm install # or yarn install
 ```
 
-### Start the React development server:
+#### Start the React development server:
 
 ```bash
 npm run dev
 ```
 
-### The frontend should open in your browser, typically at http://localhost:3000.
+The frontend should open in your browser, typically at http://localhost:3000.
 
-Usage:
+## Usage
 
-Upload Documents: On the initial screen, upload your Product Requirements Document (PRD) and User Feedback data. The system supports PDF for PRD, and TXT for feedback.
+- **Upload Documents:** On the initial screen, upload your Product Requirements Document (PRD) and User Feedback data. The system supports PDF for PRD, and TXT for feedback.
 
-Analyze Documents: Click "Analyze Documents" to let the AI perform initial summarization and analytics.
+- **Analyze Documents:** Click "Analyze Documents" to let the AI perform initial summarization and analytics.
 
-Interact with the AI: Once analyzed, use the chat interface to ask strategic questions (e.g., "Generate a roadmap for Q3 focusing on enterprise collaboration," "Show me a balanced roadmap with 60% PRD, 30% user requests, 10% tech debt").
+- **Interact with the AI:** Once analyzed, use the chat interface to ask strategic questions (e.g.,  
+  _"Generate a roadmap for Q3 focusing on enterprise collaboration,"_  
+  _"Show me a balanced roadmap with 60% PRD, 30% user requests, 10% tech debt"_).
 
-Explore Outputs: View detailed roadmaps (table, Gantt, Kanban, timeline), feature briefs, or bug lists in the main content area.
+- **Explore Outputs:** View detailed roadmaps (table, Gantt, Kanban, timeline), feature briefs, or bug lists in the main content area.
 
-Download: Download AI-generated outputs as JSON files for further use.
+- **Download:** Download AI-generated outputs as JSON files for further use.
 
-Future Enhancements:
+---
 
-Expanded data integrations with project management tools and customer feedback platforms.
+## Future Enhancements
 
-Proactive AI insights and suggestions.
+- Expanded data integrations with project management tools and customer feedback platforms.
 
-Interactive editing of AI-generated plans.
+- Proactive AI insights and suggestions.
 
-User management, collaboration features, and persistent storage.
+- Interactive editing of AI-generated plans.
 
-Scalable cloud deployment.
+- User management, collaboration features, and persistent storage.
 
-Live feedback collection.
+- Scalable cloud deployment.
+
+- Live feedback collection.
