@@ -281,7 +281,7 @@ const MainAppLayout = ({
               borderColor: defaultAntdBlue,
             }}
           >
-            {showRightPanel ? "Hide Analytics" : "Show Analytics"}
+            {showRightPanel ? "Hide Analysis" : "Show Analysis"}
           </Button>
         </div>
       </div>

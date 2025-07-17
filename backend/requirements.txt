@@ -1,9 +1,6 @@
 Flask==2.3.3
-Flask-Cors==3.0.10
-google-cloud-aiplatform==1.38.1
+Flask-Cors==4.0.1  # Or the latest stable version compatible with your Flask version
+google-cloud-aiplatform
+python-dotenv
 PyPDF2==3.0.1
-chromadb==0.4.22
-langchain==0.1.0
-langchain-community==0.0.15 # For ChromaDB and TextLoader
-# For Google Vertex AI embeddings and LLMs with LangChain
-langchain-google-vertexai==0.0.3
+

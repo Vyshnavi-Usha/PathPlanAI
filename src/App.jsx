@@ -414,8 +414,7 @@ function App() {
         }}
       >
         <Title level={1} style={{ margin: 0, color: "#1890ff" }}>
-          {/* AI-Powered Product Strategist */}
-          RoadmapAI
+          PathPlanAI
         </Title>
         <Paragraph
           style={{
@@ -424,8 +423,7 @@ function App() {
             color: "rgba(0, 0, 0, 0.65)",
           }}
         >
-          {/* Bridge the gap between strategic goals and the voice of the customer.
-          Upload your documents and enter your strategic question. */}
+          Turn chaos into clarity with AI-powered roadmap generation
         </Paragraph>
       </Header>
 
@@ -508,7 +506,7 @@ function App() {
           padding: "24px 0",
         }}
       >
-        AI-Powered Product Strategist ©{new Date().getFullYear()}
+        ©{new Date().getFullYear()} PathPlan AI. All rights reserved.
       </Footer>
     </Layout>
   );

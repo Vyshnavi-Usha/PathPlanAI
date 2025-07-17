@@ -1,12 +1,129 @@
-# React + Vite
+PathPlanAI: Turn chaos into clarity with AI-powered roadmaps
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Overview
+PathPlanAI is an interactive prototype designed to revolutionize how product leaders synthesize complex information and generate strategic roadmaps. This tool acts as an intelligent strategic partner, efficiently integrating structured Product Requirements Documents (PRDs) with unstructured user feedback. It empowers users to generate dynamic, data-driven roadmaps through natural language prompts, enhancing decision-making efficiency and strategic alignment.
 
-Currently, two official plugins are available:
+Features
+Intelligent Data Ingestion: Processes and synthesizes content from diverse sources, including PDF/text PRDs and plain text/CSV user feedback.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Prompt-Driven Interaction: Engage with the tool via a natural language chat interface to pose strategic questions.
 
-## Expanding the ESLint configuration
+Dynamic & Contextual Roadmap Generation:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+AI intelligently weighs user feedback against PRD strategic goals.
+
+Customizable prioritization based on user-specified effort allocation (e.g., "60% PRD strategy, 30% top user requests, 10% tech debt").
+
+Handles complex, multi-intent prompts (e.g., bug fixes, feature briefs with justifications from user quotes).
+
+Rich Data Visualization: Roadmaps are presented through interactive views including a detailed table, Gantt chart, Kanban board, and chronological timeline.
+
+Transparency & Explainability: AI-generated insights include references linking directly to source quotes from the PRD or user feedback.
+
+AI & Technical Highlights
+This prototype is built upon Google Vertex AI's gemini-2.0-flash model, chosen for its advanced capabilities in complex instruction following, reliable structured JSON output generation, and contextual understanding.
+
+The architecture comprises:
+
+Backend (Flask/Python): Manages document ingestion, maintains an in-memory document store, and orchestrates direct API calls to Vertex AI. It employs concurrent threading for optimized initial analysis.
+
+Frontend (React/Ant Design): Provides a modern, responsive user interface for seamless interaction and dynamic visualization of AI-generated strategic outputs.
+
+Prompt Engineering: Extensive prompt engineering, including detailed system instructions and explicit JSON schemas, was crucial to guide the AI, minimize hallucination, and ensure precise, actionable outputs.
+
+Ethical AI Considerations
+Our project integrates foundational ethical AI considerations:
+
+Transparency: AI insights are linked to source references for verifiability.
+
+Bias Mitigation: Designed as an augmentation tool for human decision-making, acknowledging the need for human oversight to mitigate potential biases from input data.
+
+Data Privacy: All uploaded content is processed in a temporary, in-memory backend store and is not persistently saved in this prototype.
+
+Managing Hallucination: Rigorous prompt engineering and strict JSON schemas are employed to enhance the reliability and accuracy of strategic outputs.
+
+Getting Started
+Follow these steps to set up and run the project locally.
+
+Prerequisites
+Python 3.8+
+
+Node.js (LTS recommended) & npm/yarn
+
+Google Cloud Project with Vertex AI API enabled and authenticated access (e.g., via gcloud auth application-default login)
+
+1. Clone the Repository
+   git clone <your-repository-url>
+   cd <your-repository-name>
+
+2. Backend Setup
+   Navigate to the backend directory:
+
+cd backend
+
+Create and activate a Python virtual environment:
+
+python -m venv venv
+
+# On Windows: .\venv\Scripts\activate
+
+# On macOS/Linux: source venv/bin/activate
+
+Install Python dependencies:
+
+pip install -r requirements.txt
+
+Set up your Google Cloud Project ID and Region. It's recommended to use environment variables. Create a .env file in the backend directory:
+
+# .env file in backend/
+
+PROJECT_ID="your-gcp-project-id"
+REGION="your-gcp-region" # e.g., us-central1
+
+Run the Flask backend:
+
+python app.py
+
+The backend should start on http://127.0.0.1:5000.
+
+3. Frontend Setup
+   Open a new terminal and navigate to the frontend directory:
+
+cd frontend
+
+Install Node.js dependencies:
+
+npm install # or yarn install
+
+Start the React development server:
+
+npm start # or yarn start
+
+The frontend should open in your browser, typically at http://localhost:3000.
+
+Usage
+Upload Documents: On the initial screen, upload your Product Requirements Document (PRD) and User Feedback data. The system supports PDF, DOCX, TXT, and Markdown for PRD, and TXT/CSV for feedback.
+
+Analyze Documents: Click "Analyze Documents" to let the AI perform initial summarization and analytics.
+
+Interact with the AI: Once analyzed, use the chat interface to ask strategic questions (e.g., "Generate a roadmap for Q3 focusing on enterprise collaboration," "Show me a balanced roadmap with 60% PRD, 30% user requests, 10% tech debt").
+
+Explore Outputs: View detailed roadmaps (table, Gantt, Kanban, timeline), feature briefs, or bug lists in the main content area.
+
+Download: Download AI-generated outputs as JSON files for further use.
+
+Future Enhancements
+Integration of advanced prioritization frameworks (RICE, MoSCoW).
+
+Expanded data integrations with project management tools and customer feedback platforms.
+
+Proactive AI insights and suggestions.
+
+Interactive editing of AI-generated plans.
+
+User management, collaboration features, and persistent storage.
+
+Scalable cloud deployment.
+
+License
+This project is licensed under the MIT License - see the LICENSE file for details.

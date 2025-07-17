@@ -156,7 +156,7 @@ const FeedbackAnalyticsColumn = ({
           <span className="flex items-center gap-2">
             <Tag className="text-blue-600" size={18} />
             <span className="text-lg font-semibold text-blue-600">
-              Feedback Analytics
+              Feedback Analysis
             </span>
           </span>
         }
