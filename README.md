@@ -149,3 +149,11 @@ The frontend should open in your browser, typically at http://localhost:3000.
 - Scalable cloud deployment.
 
 - Live feedback collection.
+
+
+### Demo Video
+
+<video width="600" controls>
+  <source src="Demo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
