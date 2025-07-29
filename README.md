@@ -152,9 +152,6 @@ The frontend should open in your browser, typically at http://localhost:3000.
 
 ### Demo Video
 
-<video width="600" controls>
-  <source src="Demo.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-> **Note:** GitHub can't preview this video file inline. Please download it to watch.
+[Download Demo Video (9.3 MB)](./Demo.mp4)
+- **Note:** GitHub can't preview this video file inline. Please download it to watch.
 
