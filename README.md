@@ -151,6 +151,3 @@ The frontend should open in your browser, typically at http://localhost:3000.
 - Live feedback collection.
 
 
-### Demo Video
-
-[Download Demo Video](./Demo.mp4)
